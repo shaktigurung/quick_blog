@@ -6,9 +6,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= auto_discovery_link_tag(:atom, posts_path(:atom)) %>
   </head>
 
   <body>
+    <%= render partial: 'layouts/header' %>
     <p class="navbar-text pull-right">
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
@@ -33,6 +35,7 @@
         </div>
       </div>
     </div>
+    <%= render partial: 'layouts/footer' %>
   </body>
 </html>
 
