@@ -1,3 +1,4 @@
+# spec/features/managing_posts_spec.rb
 require 'rails_helper'
 
 RSpec.feature 'Managing Posts', :type => :feature do

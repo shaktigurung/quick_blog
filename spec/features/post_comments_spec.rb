@@ -1,3 +1,4 @@
+# spec/features/post_comments_spec.rb
 require 'rails_helper'
 
 RSpec.feature "Posting Comments", :type => :feature do
