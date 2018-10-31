@@ -1,4 +1,9 @@
 class Post < ApplicationRecord
-    has_many :comments, dependent: :destroy
-    validates :body, :title, presence: true
-end
+    has_many :comments
+  
+    validates_presence_of :body, :title
+  
+    def content
+      MarkdownService.new.render(body)
+    end
+  end
